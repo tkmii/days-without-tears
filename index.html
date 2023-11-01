@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Дней без слёз</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+        <div id="app">
+            <div>Дней без слёз во фронтенде:<span class="counter">{{ count }}</span></div>
+        <button @click="count++">Добавить ещё один день</button>
+        <button @click="addNull">Аннулировать</button>
+        </div>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="scripts.js"></script>
+    </body>
+</html>
