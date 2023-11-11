@@ -1,8 +1,3 @@
-@font-face {
-    font-family: "DS-DIGITAL";
-    src: url("/fonts/7fonts.ru_DS-DIGI.TTF") format("TTF"),
-  }
-
 body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
@@ -15,6 +10,7 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    overflow-y: auto;
 }
 
 .wrapper::before {
@@ -103,9 +99,10 @@ body {
 .buttons {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 30px;
 }
 
-span.counter {
+.counter {
     text-shadow: none;
     background: black;
     border-radius: 10px;
@@ -115,16 +112,40 @@ span.counter {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    font-family: 'DS-DIGITAL', sans-serif;
+    font-family: 'Handjet', sans-serif;
     position: relative;
 }
 
-span.counter::before {
-    content: '';
-    width: 100%;
-    background: black;
-    height: 3px;
-    position: absolute;
-    top: 50%;
-    right: 0;
+.btn-positive {
+    color: #ffffff;
+    background-color: #b996dd;
+    border: none;
+    border-radius: 50px;
+    padding: 15px;
+    background: rgb(247,150,192);
+    background: radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 100%);
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    cursor: pointer;
+}
+
+.btn-positive span {
+    font-weight: 600;
+}
+
+.btn-positive:hover {
+    background: radial-gradient(circle, rgb(245 182 209) 0%, rgb(168 204 248) 100%);
+}
+
+.btn-negative {
+    border: none;
+    border-radius: 50px;
+    padding: 15px;
+    color: #ffffff;
+    background: linear-gradient(0deg, rgb(91 85 76) 0%, rgb(14 14 14) 100%);
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    cursor: pointer;
+}
+
+.btn-negative:hover {
+    background: linear-gradient(0deg, rgb(91 85 76) 0%, rgb(14 14 14) 50%);
 }

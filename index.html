@@ -5,7 +5,7 @@
         <title>Дней без слёз</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&family=Raleway:wght@400;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@300;400&family=Raleway:wght@400;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
@@ -16,8 +16,8 @@
                     <div class="text">Дней без слёз во фронтенде:</div>
                     <span class="counter">{{ count }}</span></div>
                 <div class="buttons">
-                    <button @click="count++">Я сегодня плакал из-за фронтенда</button>
-                    <button @click="addNull">Я сегодня не плакал из-за фронтенда</button>
+                    <button class="btn-positive" @click="count++">Я сегодня <span>НЕ</span> плакал из-за фронтенда</button>
+                    <button class="btn-negative" @click="addNull">Я сегодня плакал из-за фронтенда</button>
                 </div>
             </div>
         </div>
