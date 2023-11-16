@@ -132,7 +132,7 @@ body {
     font-weight: 600;
 }
 
-.btn-positive:hover {
+.btn-positive:hover, .btn-positive:disabled {
     background: radial-gradient(circle, rgb(245 182 209) 0%, rgb(168 204 248) 100%);
 }
 
@@ -161,10 +161,10 @@ body {
 .popup {
     background: mistyrose;
     width: 80%;
-    height: 80%;
+    height: 90%;
     position: relative;
     z-index: 3;
-    top: 10%;
+    top: 5%;
     right: -10%;
     border-radius: 50px;
     box-shadow: -1px 3px 20px 0px black;
@@ -173,13 +173,14 @@ body {
 }
 
 .close-btn {
-    position: relative;
-    left: 97%;
+    position: absolute;
+    left: 100%;
     top: -20px;
     display: flex;
     border: none;
     background: transparent;
     cursor: pointer;
+    padding: 0;
 }
 
 .close-btn svg {
@@ -198,8 +199,11 @@ body {
 }
 
 .congratulations {
-    overflow-y: scroll;
-    height: inherit;
+    overflow-y: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .congratulations-img {

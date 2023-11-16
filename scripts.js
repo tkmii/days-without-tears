@@ -3,17 +3,25 @@ const { createApp, ref } = Vue
 const MyComponent = {
   setup() {
     let count = ref(0);
+    let popupPositive = ref(false);
+    let isDisabled = ref(false);
+
+    function addOne() {
+      count.value++;
+      popupPositive.value = true;
+      isDisabled.value = true;
+    }
 
     function addNull() {
-        count.value = 0;
+      count.value = 0;
     }
 
     return {
-      count, addNull
+      popupPositive, count, addOne, addNull, isDisabled
     }
   }
 }
 
-createApp(MyComponent).mount('#app')
+//function PopupPositiveOpen() {}
 
-localStorage.setItem("counter","Vue");
+createApp(MyComponent).mount('#app')
