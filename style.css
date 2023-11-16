@@ -146,7 +146,7 @@ body {
     cursor: pointer;
 }
 
-.btn-negative:hover {
+.btn-negative:hover, .btn-negative:disabled {
     background: linear-gradient(0deg, rgb(91 85 76) 0%, rgb(14 14 14) 50%);
 }
 
@@ -159,7 +159,6 @@ body {
 }
 
 .popup {
-    background: mistyrose;
     width: 80%;
     height: 90%;
     position: relative;
@@ -170,6 +169,10 @@ body {
     box-shadow: -1px 3px 20px 0px black;
     box-sizing: border-box;
     padding: 40px;
+}
+
+.popup-positiv {
+    background: #ffe4e1;
 }
 
 .close-btn {
@@ -184,7 +187,6 @@ body {
 }
 
 .close-btn svg {
-    background: #ffffff;
     border-radius: 50%;
 }
 
@@ -192,13 +194,13 @@ body {
     fill: rgb(76, 76, 76);
 }
 
-.praise {
+.popup-message__title {
     font-weight: 600;
     font-size: 40px;
     text-align: center;
 }
 
-.congratulations {
+.popup-message {
     overflow-y: auto;
     height: 100%;
     display: flex;
@@ -206,6 +208,19 @@ body {
     align-items: center;
 }
 
-.congratulations-img {
+.popup-message__img {
     width: 300px;
+}
+
+.popup-negative {
+    background: #adadad;
+}
+
+.popup-message__text blockquote cite {
+    display: block;
+    text-align: end;
+}
+
+.popup-message__text blockquote p {
+    font-weight: 600;
 }

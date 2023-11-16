@@ -5,6 +5,7 @@ const MyComponent = {
     let count = ref(0);
     let popupPositive = ref(false);
     let isDisabled = ref(false);
+    let popupNegative = ref(false);
 
     function addOne() {
       count.value++;
@@ -14,10 +15,12 @@ const MyComponent = {
 
     function addNull() {
       count.value = 0;
+      popupNegative.value = true;
+      isDisabled.value = true;
     }
 
     return {
-      popupPositive, count, addOne, addNull, isDisabled
+      popupPositive, popupNegative, count, addOne, addNull, isDisabled
     }
   }
 }
