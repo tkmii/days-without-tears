@@ -1,30 +1,31 @@
-const { createApp, ref } = Vue
-
-const MyComponent = {
-  setup() {
-    let count = ref(0);
-    let popupPositive = ref(false);
-    let isDisabled = ref(false);
-    let popupNegative = ref(false);
-
-    function addOne() {
-      count.value++;
-      popupPositive.value = true;
-      isDisabled.value = true;
-    }
-
-    function addNull() {
-      count.value = 0;
-      popupNegative.value = true;
-      isDisabled.value = true;
-    }
-
+Vue.createApp({
+  data() {
     return {
-      popupPositive, popupNegative, count, addOne, addNull, isDisabled
+      count: 0,
+      popupPositive: false,
+      isDisabled: false,
+      popupNegative: false,
+      counter: []
+    };
+  },
+  methods: {
+    addOne() {
+      this.count++;
+      this.popupPositive = true;
+      this.isDisabled = true;
+    },
+    addNull() {
+      this.count = 0;
+      this.popupNegative = true;
+      this.isDisabled = true;
+    },
+  },
+  mounted() {
+      this.counter = JSON.parse(localStorage.getItem("counter")) || []
+  },
+  watch: {
+    counter(newValue, oldValue) {
+      localStorage.setItem("counter", JSON.stringify(newValue));
     }
   }
-}
-
-//function PopupPositiveOpen() {}
-
-createApp(MyComponent).mount('#app')
+}).mount('#app')

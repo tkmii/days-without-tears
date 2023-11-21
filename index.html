@@ -14,7 +14,7 @@
             <div class="content">
                 <div class="text-wrapper">
                     <div class="text">Дней без слёз во фронтенде:</div>
-                    <span class="counter">{{ count }}</span></div>
+                    <span class="counter" v-model="counter">{{ count }}</span></div>
                 <div class="buttons">
                     <button class="btn-positive" @click="addOne" :disabled="isDisabled">Я сегодня <span>НЕ</span> плакал из-за фронтенда</button>
                     <button class="btn-negative" @click="addNull" :disabled="isDisabled">Я сегодня плакал из-за фронтенда</button>
