@@ -1,7 +1,7 @@
 Vue.createApp({
   data() {
     return {
-      count: 0,
+      count: localStorage.getItem('count') || 0,
       popupPositive: false,
       isDisabled: false,
       popupNegative: false,
@@ -11,21 +11,15 @@ Vue.createApp({
   methods: {
     addOne() {
       this.count++;
+      localStorage.setItem('count', this.count);
       this.popupPositive = true;
       this.isDisabled = true;
     },
     addNull() {
       this.count = 0;
+      localStorage.setItem('count', this.count);
       this.popupNegative = true;
       this.isDisabled = true;
     },
   },
-  mounted() {
-      this.counter = JSON.parse(localStorage.getItem("counter")) || []
-  },
-  watch: {
-    counter(newValue, oldValue) {
-      localStorage.setItem("counter", JSON.stringify(newValue));
-    }
-  }
 }).mount('#app')
