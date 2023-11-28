@@ -40,7 +40,7 @@
                             <p>Ты сегодня продуктивно поработал(-а), так что обязательно хорошо отдохни после рабочего дня. Отдых - это инвестиция в твою продуктивность, не забывай!</p>
                             <p>Лови котика</p>
                         </div>
-                        <img src="cat.jpg" class="congratulations-img" alt="Котик">
+                        <img v-if="popupPositive" :src="positiveSrc" class="congratulations-img" alt="Котик">
                     </div>
                 </div>
             </div>
@@ -63,17 +63,17 @@
                             <p>Печально, что что-то так сильно расстроило тебя сегодня. Неудачные дни случаются. Завтра будет лучше (но это не точно).</p>
                             <p>И помни:</p>
                             <blockquote>
-                                <p>Никогда не сдаваться... Встать, когда все рухнуло — вот настоящая сила.</p>
-                                <cite>Наруто Узумаки</cite>
+                                <p>{{ quote }}</p>
+                                <cite>{{ author }}</cite>
                             </blockquote>
                             <p>А ещё ты можешь посмеяться с мема</p>
                         </div>
-                        <img src="meme.jpg" class="popup-message__img" alt="Мем про программирование"></div></div></div>
+                        <img :src="memeSrc" class="popup-message__img" alt="Мем про программирование"></div></div></div>
                     </div>
                 </div>
             </div>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-        <script src="https://unpkg.com/vue-cookies@1.8.3/vue-cookies.js"></script>
         <script src="scripts.js"></script>
+        <script src="array-scripts.js"></script>
     </body>
 </html>
