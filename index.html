@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Дней без слёз</title>
+        <link rel="icon" href="favicon.svg">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@300;400&family=Raleway:wght@400;900&display=swap" rel="stylesheet">
@@ -16,11 +17,11 @@
                     <div class="text">Дней без слёз во фронтенде:</div>
                     <span class="counter" v-model="counter">{{ count }}</span></div>
                 <div class="buttons">
-                    <button class="btn-positive" @click="addOne" :disabled="isDisabled">Я сегодня <span>НЕ</span> плакал из-за фронтенда</button>
-                    <button class="btn-negative" @click="addNull" :disabled="isDisabled">Я сегодня плакал из-за фронтенда</button>
+                    <button class="btn btn-positive" @click="addOne" :disabled="isDisabled">Я сегодня <span>НЕ</span> плакал из-за фронтенда</button>
+                    <button class="btn btn-negative" @click="addNull" :disabled="isDisabled">Я сегодня плакал из-за фронтенда</button>
                 </div>
             </div>
-            <div class="popup-wrapper" v-show="popupPositive">
+            <div class="popup-wrapper" v-show="popupPositive" style="display: none;">
                 <div class="popup popup-positiv">
                     <button class="close-btn" @click="popupPositive = false">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="40" height="40" viewBox="0 0 612 612" xml:space="preserve">
